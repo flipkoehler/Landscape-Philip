@@ -1,0 +1,309 @@
+/*Global */
+body {
+  padding: 0px;
+  margin: 0px;
+  background-color: #FFFFFF;
+}
+
+.background {
+    width: 80vw;
+    height: 80%;
+    margin: 0 auto;
+}
+
+
+
+/*Backgrounds Skyline */
+.skyline {
+  background: linear-gradient(to bottom, #FFFFFF 0%, #D0F1FD 75%, #B7E7FB 100%);
+  position: relative;
+  height: 60vh;
+}
+
+
+
+/* Mountains */ 
+.mountain1 {
+  width: 0; 
+  height: 0; 
+  border-left: 150px solid transparent;
+  border-right: 150px solid transparent;
+  border-bottom: 30vh solid; 
+  position: absolute;
+  bottom: 0%;
+  left: 0px;
+  z-index: 1;
+}
+
+.mountain2 {
+  width: 0; 
+  height: 0; 
+  border-left: 120px solid transparent;
+  border-right: 120px solid transparent;
+  border-bottom: 40vh solid #615756;
+  position: absolute;
+  left: 7vw;
+  bottom: 0%;
+  z-index: 2;
+}
+
+.mountain3 {
+  width: 0; 
+  height: 0; 
+  border-left: 120px solid transparent;
+  border-right: 120px solid transparent;
+  border-bottom: 35vh solid #BEB7A4;
+  position: absolute;
+  left: 17vw;
+  bottom: 0%;
+  opacity: 1;
+  z-index: 1;
+}
+
+/* Clouds */
+
+.cloud1 {
+    margin-top: 15vh;
+    position: absolute;
+    animation: slide 30s linear infinite;
+    z-index: 2;
+  }
+
+.cloud2 {
+    margin-top: 20vh;
+    position: absolute;
+    animation: slide2 25s linear infinite;
+    z-index: 2;
+  }
+
+  .cl1 {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background: #fff;
+  
+  }
+  
+  .cl2 {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+      position: absolute;
+    top: -50px;
+    left: 25px;
+    background: #fff;
+  }
+  
+  .cl3 {
+    width: 75px;
+    height: 75px;
+    border-radius: 50%;
+    position: absolute;
+    top: -25px;
+    left: 100px;
+    background: #fff;
+  }
+  
+  .cl4 {
+    width: 110px;
+    height: 15px;
+    background: #fff;
+    position: absolute;
+    left: 25px;
+    top: 35px;
+  }
+
+/* Tree */
+.tree {
+  height: 15vw;
+  width: 15vw;
+  position: absolute;
+  z-index: 3;
+}
+
+.tree1 {
+  right: 20%;
+  bottom: 0%;
+}
+
+.tree2 {
+  right: 10%;
+  bottom: 10%;
+}
+
+.tree3 {
+  right: 80%;
+  bottom: 20%;
+}
+
+.leaf { 
+  position: relative;
+  width: 50%;
+  height: 50%;
+  border-radius: 50px;
+  background: linear-gradient(90deg, #2ecc71, #2ecc71 50%, #27ae60, #27ae60 50%);
+  margin: 0 auto;
+}
+
+.treetrunk {
+  position: relative;
+  width: 15%;
+  height: 40%;
+  background: linear-gradient(90deg, #e67e22, #e67e22 50%, #d35400, #d35400 50%);
+  margin: 0 auto;
+}
+
+
+/* Sun */ 
+.sun {
+    width: 13vw;
+    height: 13vw;
+    position: absolute;
+    background: #fec915;
+    border-radius: 50%;
+    box-shadow: 0px 0px 1vw 1vw #ffa502, 0px 0px 1vw 1vw #d0e7f4;
+    right: 2vw;
+    top: 2vw;
+    z-index: 1;
+    animation: grow 6s ease-in-out infinite;
+}
+
+.suncrater {
+    margin: 1% auto;
+    position: absolute;
+    background: rgba(255,177,3,0.4);
+    border-radius: 50%;
+}
+
+.suncrater1 {
+    width: 30%;
+    height: 30%;
+    top: 8%;
+    left: 25%;
+}
+
+.suncrater2 {
+    width: 15%;
+    height: 15%;
+    top: 30%;
+    left: 63%;
+}
+
+.suncrater3 {
+    width: 10%;
+    height: 10%;
+    top: 28%;
+    left: 80%;
+}
+
+.suncrater4 {
+    width: 25%;
+    height: 25%;
+    top: 45%;
+    left: 15%;
+}
+
+.suncrater5 {
+    width: 10%;
+    height: 10%;
+    top: 70%;
+    left: 65%;
+}
+
+@keyframes grow {
+    0% {
+        box-shadow: 0px 0px 0.8vw 0.8vw #ffa502, 0px 0px 1vw 1vw #d0e7f4;
+    }
+    50% {
+        box-shadow: 0px 0px 1.5vw 1.5vw #ffa502, 0px 0px 1vw 1vw #d0e7f4;
+    }
+    100% {
+        box-shadow: 0px 0px 0.8vw 0.8vw #ffa502, 0px 0px 1vw 1vw #d0e7f4;
+
+    }
+  }
+
+  @keyframes slide {
+    from {
+      transform: translateX(0vw);
+    }
+    to {
+      transform: translateX(88vw);
+    }
+  }
+
+  @keyframes slide2 {
+    from {
+      transform: translateX(-10vw);
+    }
+    to {
+      transform: translateX(88vw);
+    }
+  }
+
+
+/* Media Queries */
+  @media only screen and (max-width: 1000px) {
+    .sun {
+    width: 20vw;
+    height: 20vw;
+    }
+    .tree {
+      width: 25vw;
+      height: 25vw;
+    }
+  }
+
+  @media only screen and (max-width: 500px) {
+    .sun {
+    width: 30vw;
+    height: 30vw;
+    }
+    .tree {
+      width: 35vw;
+      height: 35vw;
+    }
+  }
+
+
+/* Background Floor */
+
+.ground {
+    background: linear-gradient(to bottom, #95b23f 0%, #B4D05F 75%, #FFFFFF 100%);
+    position: relative;
+    height: 30vh;
+}
+
+
+.street {
+    height: 100%;
+    position: relative;
+}
+
+.street0 {
+    position: relative;
+    height: 15%;
+}
+
+.street1 {
+    background-color: #ffd18d;
+    box-sizing: border-box;
+    position: relative;
+    height: 25%;
+    border-top: #d1ad78 solid 0.4vw;
+    border-bottom: #d1ad78 solid 0.4vw;;
+
+}
+
+
+.switchday {
+  background-color: transparent;
+  padding: 20px;
+  border-radius: 10px;
+  text-align: center;
+}
+
+
+.skyline .night {
+  background-color: darkblue;
+}
